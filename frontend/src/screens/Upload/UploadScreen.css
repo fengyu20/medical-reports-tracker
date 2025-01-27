@@ -1,0 +1,305 @@
+/* src/screens/Upload/UploadScreen.css */
+
+/* Main Container */
+.upload-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* File Upload Section */
+.file-upload-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.file-upload-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.file-upload-section .instruction-text {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.file-upload-section .file-input {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.file-upload-section .file-input:focus {
+  border-color: #2196F3;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+/* Indicator Input Section */
+.indicator-input-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.indicator-input-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.indicator-input-section .instruction-text {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.indicator-input-section .input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.indicator-input-section .indicator-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.indicator-input-section .indicator-input:focus {
+  border-color: #2196F3;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.indicator-input-section .add-indicator-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.indicator-input-section .add-indicator-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.indicator-input-section .add-indicator-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.indicator-input-section .indicators-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.indicator-input-section .indicator-tag {
+  background-color: #e0f2f1;
+  color: #00695c;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.indicator-input-section .remove-indicator-btn {
+  background: none;
+  border: none;
+  color: #c53030;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Upload Button */
+.upload-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.upload-button:hover:not(:disabled) {
+  background-color: #1976D2;
+}
+
+.upload-button:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+}
+
+/* Status Messages */
+.error-message,
+.success-message {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.error-message {
+  background-color: #fde8e8;
+  color: #c53030;
+}
+
+.success-message {
+  background-color: #e6ffed;
+  color: #2c7a7b;
+}
+
+/* Loading Container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #2196F3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error Container */
+.error-container {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-container p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.error-container button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-container button:hover {
+  background-color: #1976D2;
+}
+
+/* Success Message */
+.success-message {
+  background-color: #e6ffed;
+  color: #2c7a7b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .upload-container {
+    padding: 1rem;
+  }
+
+  .file-upload-section,
+  .indicator-input-section {
+    padding: 1rem;
+  }
+
+  .upload-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .indicator-input-section .input-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .indicator-input-section .add-indicator-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .indicator-input-section .indicator-input {
+    width: 100%;
+  }
+}
+
+/* Touch-friendly Hover States for Mobile */
+@media (hover: none) {
+  .upload-button:hover {
+    background-color: #2196F3;
+  }
+  
+  .upload-button:active {
+    background-color: #1976D2;
+  }
+
+  .indicator-input-section .add-indicator-btn:hover {
+    background-color: #4CAF50;
+  }
+  
+  .indicator-input-section .add-indicator-btn:active {
+    background-color: #45a049;
+  }
+}
