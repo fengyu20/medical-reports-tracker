@@ -51,9 +51,3 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Project specific
-test.md
-test.json
-services_local_env.py
-lambda_deployment
