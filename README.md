@@ -57,9 +57,9 @@ The backend will be hosted on localhost:5001
 
 There are two parts to AWS configuration:
 1.	Set up AWS services, including S3, SQS, DynamoDB, Lambda, API Gateway, Cognito, etc.
-	•	Further details will be provided in the future.
+- Further details will be provided in the future.
 2.	Set proper AWS credentials in the .env files within the backend and frontend folders.
-	•	Note: You can use the .env.example file as a reference.
+- Note: You can use the .env.example file as a reference.
 
 ## User Journey:
 
