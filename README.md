@@ -18,9 +18,7 @@ Currently, the frontend and backend are hosted locally.
 
 Next steps:
 1. Project Deployment Side:
-   - Deploy frontend (react) to AWS Amplify
-   - Deploy backend (flask) to AWS Elastic Beanstalk
-   - Configure AWS Neworking Settings.
+   - Deploy frontend and backend to AWS.
    - Integrate with AWS API Gateway.
 2. Project Feature Side:
    - Allow users to edit all the stored data and the original report.
