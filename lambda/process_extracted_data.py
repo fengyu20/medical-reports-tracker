@@ -315,9 +315,6 @@ def extract_text_with_queries(textract_data, user_indicator):
     - dict: Extracted data with the specified indicator.
     """
     try:
-        # Removed the hard-coded user_indicator
-        # user_indicator = "fasting blood sugar"
-
         # Extract LINE blocks from Textract response
         blocks = textract_data.get('Blocks', [])
         line_blocks = [block for block in blocks if block['BlockType'] == 'LINE']
@@ -356,7 +353,7 @@ def extract_text_with_queries(textract_data, user_indicator):
 
             if re.match(r"^\d+(\.\d+)?$", line):
                 results.append(line)
-            elif re.match(r"^\d+[-–]\d+$", line):
+            elif re.match(r"^\d+\s*[-–]\s*\d+$", line):
                 ranges.append(line)
             elif re.match(r"[a-zA-Z]+\/[a-zA-Z]+$", line):
                 units.append(line)
