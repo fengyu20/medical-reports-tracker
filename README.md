@@ -56,7 +56,7 @@ Medical Reports Tracker is designed to help users transform unstructured clinica
 
 ### User Flow
 
-![Demo Video](/docs/demo.mp4)
+![demo](docs/demo.gif)
 
 1. **Authentication**: The user logs in via AWS Cognito.
 2. **Home View**: The user views existing health metrics on the dashboard.
